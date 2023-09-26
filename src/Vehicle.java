@@ -10,7 +10,7 @@ public class Vehicle {
         this.vehicleType = vehicleType;
         this.drivenMiles = drivenMiles;
         this.driverMinAge = driverMinAge;
-
+        System.out.println(vehicleType + " created. " + maxMiles + " miles to go!");
     }
 
     public void setDriver(Driver driver) {
@@ -20,7 +20,7 @@ public class Vehicle {
             this.driver = driver;
             System.out.println("Driver changed to " + driverName);
         } else {
-            System.out.println("Driver not changed! " + driverName + " is " + driverAge + " but must be " + driverMinAge + " or older to drive " + vehicleType);
+            System.out.println("Driver not changed! " + driverName + " is " + driverAge + " but must be " + driverMinAge + " or older to drive " + vehicleType.toLowerCase());
         }
     }
 
