@@ -14,9 +14,13 @@ public class Vehicle {
     }
 
     public void setDriver(Driver driver) {
+        String driverName = driver.getName();
+        int driverAge = driver.getAge();
         if (driver.getAge() >= driverMinAge) {
             this.driver = driver;
-            System.out.println("hej");
+            System.out.println("Driver changed to " + driverName);
+        } else {
+            System.out.println("Driver not changed! " + driverName + " is " + driverAge + " but must be " + driverMinAge + " or older to drive " + vehicleType);
         }
     }
 
